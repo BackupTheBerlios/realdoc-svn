@@ -1,0 +1,22 @@
+<!ELEMENT realdoc (meta*,index*,package*,module*)>
+<!ATTLIST realdoc version CDATA #REQUIRED>
+
+<!ELEMENT meta (#PCDATA)>
+<!ATTLIST meta name CDATA #REQUIRED>
+
+<!ELEMENT index (doc)>
+<!ATTLIST index type CDATA #REQUIRED name CDATA #REQUIRED path CDATA #REQUIRED>
+
+<!ELEMENT package (doc, subpackage*, submodule*, class*, def*)>
+<!ATTLIST package name CDATA #REQUIRED path CDATA #REQUIRED>
+
+<!ELEMENT class (doc, ancestor*, class*, def*)>
+<!ATTLIST class name CDATA #REQUIRED path CDATA #REQUIRED>
+<!ELEMENT ancestor (#PCDATA)>
+
+<!ELEMENT def (doc, arg*, class*, def*)>
+<!ATTLIST def name CDATA #REQUIRED path CDATA #REQUIRED>
+<!ELEMENT arg (#PCDATA)>
+<!ATTLIST arg type CDATA "normal" default CDATA #IMPLIED>
+
+<!ELEMENT doc (#PCDATA)>

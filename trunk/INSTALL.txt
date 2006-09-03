@@ -1,0 +1,29 @@
+Copyright 2006  Peter Gebauer
+(see LICENSE.txt for licensing information)
+
+Installation guide for GNU and similar:
+
+Requirements:
+ Python 2.4 or higher
+ libxml2 for Python (optional!)
+
+
+1) Edit the file "Makefile" and check the PREFIX and PYTHON_VERSION variables.
+   If they are not to your liking, alter them as you please.
+
+2) Run "make install"
+
+Optional:
+
+3) Test realdoc by running "realdoc test/" and check out the
+   resulting XML in the directory "testpackage".
+   If you have libxml2 and libxslt for Python installed you can add the
+   -x option to transform the XML file to XHTML.
+
+
+Installation guide for Windows (unstested):
+1) After unzipping/untaring, just run "python rd.py" from that location.
+
+
+If anybody can volounteer to write a better installer, drop me a mail
+at jaeger487 at yahoo.com.

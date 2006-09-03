@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>RealDoc - Simple API documentation for Python</title>
+    <style type="text/css">
+      code { border: 1px solid red; padding: 4px; background: #FFFFE0 }
+    </style>
+  </head>
+  <body>
+    <h1>RealDoc - Simple API documentation for Python</h1>
+    <table style="border: 0">
+      <tr>
+        <td>
+          <a href="http://developer.berlios.de" title="BerliOS Developer">
+            <img src="http://developer.berlios.de/bslogo.php?group_id=7276" 
+                 alt="BerliOS Developer Logo"
+                 style="border: 0; width: 124px; height: 32px; margin: 1em"/>
+          </a>
+        </td>
+        <td>
+          Project is hosted on 
+          <a href="http://developer.berlios.de/projects/realdoc/">BerliOS RealDoc project site</a>.
+        </td>
+      </tr>
+    </table>
+    <blockquote>
+      RealDoc can parse Python source code and generate various output, like
+      text, LaTeX, DocBook or RealDoc-XML. RealDoc is fast and does not require
+      packages or modules to be imported (i.e executed) which means that you
+      can get API documentation from projects that require tedious setup
+      without the actual setup. Just let RealDoc read it's source code.
+    </blockquote>
+    <h2>Example output</h2>
+    <p>
+      Since this is a CLI utility and the output is text, there are no
+      screenshots. But here are some examples of XHTML generated using the
+      built-in XSLT-support and RealDoc-XML serialization.
+    </p>
+    <code>
+      realdoc -t "The RealDoc API" -c "Copyright 2006  Peter Gebauer, licensed as Public Domain" -x -o website/examples/realdoc-api src/
+    </code>
+    <p>
+      The result is available in 
+      <a href="examples/realdoc-api/index.html">examples/realdoc-api/</a>
+    </p>
+    <code>
+      realdoc -t "The Python 2.4 logging-module" -x -o website/examples/python2.4-logging /usr/lib/python2.4/logging/
+    </code>
+    <p>
+      The result is available in 
+      <a href="examples/python2.4-logging/index.html">examples/python2.4-logging/</a>
+    </p>
+    <h2>Requirements:</h2>
+    <ul>
+      <li>Python 2.4</li>
+      <li>GNU make (optional; you can preform a manual install)</li>
+      <li>libxml2/libxslt (optional; only used with the CLI -x option)</li>
+    </ul>
+    <h2>Download:</h2>
+    <p>
+      Get the latest release from the 
+      <a href="http://developer.berlios.de/project/showfiles.php?group_id=7276">BerliOS RealDoc files section</a>.
+    </p>
+    <p>
+      or
+    </p>
+    <p>
+      Get the development files from the BerliOS RealDoc Subversion repository
+      using SVN:
+    </p>
+    <code>
+      svn checkout http://svn.berlios.de/svnroot/repos/realdoc/trunk
+    </code>
+    <h2>Help out?</h2>
+    <p>
+      This project is free software (Public Domain license) and as such
+      you can make a contribution in the form of testing and/or programming.
+      You can also make feature requests on the
+      <a href="http://developer.berlios.de/projects/realdoc/">
+        project page
+      </a> under "Features".
+    </p>
+    <p>
+      Because I wrote the project in the spirit of prototyping there will
+      be a complete rewrite of the whole factory, serializer, generator and
+      formatter parts, but not until the first stable release. 
+    </p>
+    <p>
+      Any suggestions on API changes are more than welcome.
+      Drop me a line at jaeger487 (on yahoo.com) or 
+      <a href="http://developer.berlios.de/account/register.php">
+        join BerliOS
+      </a> and drop user "petgeb" a message. (you can also e-mail that user
+      at domain berlios.de.
+    </p>
+    <h2>Todo:</h2>
+    <p>
+      Aaw, there's lots of things to do.
+    </p>
+    <p>
+      Before the first release candidate these issues have to be resolved
+      (in no particular order):
+    </p>
+    <ul>
+      <li>DocBook-XML support. (serializer and generator)</li>
+      <li>
+        Text formatting. (Structured Text formatter objects 
+        for the generator)
+      </li>
+      <li>Configuration file support.</li>
+      <li>External documents inclusion for index page.</li>
+      <li>Manpage support. (serializer and generator)</li>
+    </ul>
+  </body>
+</html>
